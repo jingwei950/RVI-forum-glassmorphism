@@ -1,0 +1,23 @@
+@layer components {
+  /* LOADING SPINNER */
+
+  // Small spinner
+  .spinner-s {
+    @apply mr-2 h-4 w-4 animate-spin fill-blue-600 text-gray-200;
+  }
+
+  // Default spinner
+  .spinner {
+    @apply mr-2 h-6 w-6 animate-spin fill-blue-600 text-gray-200;
+  }
+
+  // Large spinner
+  .spinner-l {
+    @apply mr-2 h-8 w-8 animate-spin fill-blue-600 text-gray-200;
+  }
+
+  // XL spinner
+  .spinner-xl {
+    @apply mr-2 h-10 w-10 animate-spin fill-blue-600 text-gray-200;
+  }
+}

@@ -1,0 +1,58 @@
+@layer components {
+  /* AVATAR */
+
+  // Avatar element
+  .user-avatar {
+    @apply overflow-hidden rounded-full border-2 border-neutral-50;
+  }
+
+  // User avatar effect
+  .user-avatar-effect {
+    @apply cursor-pointer shadow transition-all duration-300 ease-in-out hover:border-4 hover:border-neutral-500 hover:border-opacity-50 hover:shadow-sm focus:outline-none focus:ring-0 active:scale-95;
+  }
+
+  // Stacked avatar container
+  .user-avatar-group {
+    @apply mb-5 flex -space-x-4;
+  }
+
+  // Letter initial avatar
+  .user-avatar-initial {
+    @apply relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-gray-600;
+  }
+
+  // Letter initial text style
+  .avatar-initial-text {
+    @apply text-lg font-medium text-gray-300;
+  }
+
+  // Instagram gradient border
+  .avatar-instagram-border {
+    @apply cursor-pointer rounded-full bg-gradient-to-tr from-yellow-400 to-fuchsia-600 p-1;
+  }
+
+  // Instagram read border / default border
+  .avatar-border {
+    @apply cursor-pointer rounded-full bg-neutral-400 p-1;
+  }
+
+  // Avatar online status indicator
+  .user-avatar-online {
+    @apply absolute bottom-0 left-7 h-3.5 w-3.5 rounded-full border-2 border-white bg-green-400;
+  }
+
+  // Avatar offline status indicator
+  .user-avatar-offline {
+    @apply absolute bottom-0 left-7 h-3.5 w-3.5 rounded-full border-2 border-white bg-neutral-400;
+  }
+
+  // Avatar busy status indicator
+  .user-avatar-busy {
+    @apply absolute bottom-0 left-7 h-3.5 w-3.5 rounded-full border-2 border-white bg-red-400;
+  }
+
+  // Avatar away status indicator
+  .user-avatar-away {
+    @apply absolute bottom-0 left-7 h-3.5 w-3.5 rounded-full border-2 border-white bg-yellow-400;
+  }
+}

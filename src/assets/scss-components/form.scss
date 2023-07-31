@@ -1,0 +1,133 @@
+@layer components {
+  /* FORM CONTROLS */
+
+  // Input tag default style
+  input[type='text'] {
+    @apply w-full rounded-full border-2 border-transparent bg-slate-100 px-4 py-0.5 text-base leading-8 text-black outline-none ring-1 ring-transparent focus:border-neutral-900 focus:ring-0 disabled:opacity-75;
+  }
+
+  // Textarea tag default style
+  textarea {
+    @apply block w-full rounded-lg border border-slate-300 bg-slate-100 p-2.5 text-sm text-slate-900;
+  }
+
+  // Select tag default style
+  select {
+    @apply block w-full rounded-lg border border-slate-300 bg-gray-50 p-2.5 text-sm text-slate-900 focus:border-neutral-900 focus:ring-neutral-900;
+  }
+
+  // Handle for input (Instagram/Twitter handle eg."@rivervalleyirregulars")
+  .handle {
+    @apply inline-flex items-center rounded-l-full bg-slate-200 px-3;
+  }
+
+  // Input with handle
+  .form-handle-input {
+    @apply rounded-none rounded-r-full;
+  }
+
+  // Input, type file
+  .form-file {
+    @apply w-full border-0 p-0 file:cursor-pointer file:rounded-l-full file:border-0 file:bg-slate-200 file:p-1.5 focus:outline-none;
+  }
+
+  // Checkbox/radio button
+  .form-check-input {
+    @apply h-4 w-4 rounded border-slate-300 bg-slate-100 checked:accent-blue-600;
+  }
+
+  // Checkbox/Radio text container (For Checkbox/Radio button with text and subtext)
+  .form-check-details {
+    @apply ml-2 text-sm;
+  }
+
+  // Checkbox/Radio text style (For Checkbox/Radio button with text and subtext)
+  .form-check-text {
+    @apply text-sm font-medium text-slate-900;
+  }
+
+  // Checkbox/Radio subtext style (For Checkbox/Radio button with text and subtext)
+  .form-check-subtext {
+    @apply text-xs font-normal text-slate-500;
+  }
+
+  // Checkbox/Radio container for input & text (For Checkbox/Radio button with input and text)
+  .form-check-list-details {
+    @apply flex items-center pl-3;
+  }
+
+  // Checkbox/radio list group text
+  .form-check-list-text {
+    @apply form-check-text ml-2 w-full py-3;
+  }
+
+  // Checkbox/Radio list (Used on ul)
+  .form-check-list {
+    @apply w-48 rounded-lg border border-slate-200 bg-white text-sm font-medium text-slate-900;
+  }
+
+  // Checkbox/Radio items (Used on li)
+  .form-check-item {
+    @apply w-full rounded-t-lg border-b border-slate-200;
+  }
+
+  // Textarea icon
+  .ta-icon {
+    @apply inline-flex cursor-pointer justify-center rounded p-2 text-slate-500 hover:bg-slate-100;
+  }
+
+  // Textarea comment container
+  .ta-comment-container {
+    @apply mb-4 w-full rounded-lg border border-slate-200 bg-slate-50;
+  }
+
+  // Textarea comment top container
+  .ta-comment-t-container {
+    @apply rounded-t-lg bg-slate-100 px-4 py-2;
+  }
+
+  // Textarea comment bottom container
+  .ta-comment-b-container {
+    @apply flex items-center justify-between border-t px-3 py-2;
+  }
+
+  // Textarea comment button container
+  .ta-comment-btn-container {
+    @apply flex space-x-1 pl-0 sm:pl-2;
+  }
+
+  // Textarea chat container
+  .ta-chat-container {
+    @apply flex items-center rounded-lg bg-slate-100 px-3 py-2;
+  }
+
+  // Textarea drop zone container
+  .ta-dropzone-container {
+    @apply flex w-full items-center justify-center;
+  }
+
+  // Textarea drop zone content container (Used with label)
+  .ta-dropzone-c-container {
+    @apply flex h-64 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-slate-300 bg-slate-100 hover:bg-slate-200;
+  }
+
+  // Textarea drop zone
+  .ta-dropzone-content {
+    @apply flex flex-col items-center justify-center pt-5 pb-6;
+  }
+
+  // Invalid icon
+  .invalid-icon {
+    @apply bg-[url('./assets/svg/exclamation-circle.svg')] bg-[length:1.5rem_1.5rem] bg-right bg-no-repeat bg-origin-content;
+  }
+
+  // Invalid Input with error icon
+  .invalid-input {
+    @apply invalid-icon border-2 border-red-500 outline-none focus:border-red-500 focus:ring-red-500;
+  }
+
+  // Invalid message feedback
+  .invalid-feedback {
+    @apply font-semibold text-red-500;
+  }
+}

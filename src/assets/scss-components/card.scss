@@ -1,0 +1,38 @@
+@layer components {
+  /* CARD */
+
+  // Card container
+  // .card {
+  //   @apply w-full rounded-3xl bg-neutral-50 shadow-2xl;
+  // }
+
+  // Card image top container
+  .card-img-top {
+    @apply rounded-t-3xl;
+  }
+
+  // Card image left container
+  .card-img-left {
+    @apply w-96 rounded-l-3xl;
+  }
+
+  // Card body container
+  .card-body {
+    @apply flex flex-col p-4;
+  }
+
+  // Card title
+  .card-title {
+    @apply mb-2 text-2xl font-bold tracking-[-0.025em] text-neutral-900;
+  }
+
+  // Card subtitle
+  .card-subtitle {
+    @apply mb-4 font-normal text-neutral-400;
+  }
+
+  // Card text
+  .card-text {
+    @apply mt-0 mb-4;
+  }
+}
