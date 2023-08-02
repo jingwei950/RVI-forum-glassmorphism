@@ -1,136 +1,22 @@
 <div class="w-screen h-full">
 
-  <!-- <div class="text-container"> -->
-    <nav
-      [class]="
-        'navbar
-        backdrop-blur-m
-        fixed
-        top-0
-        z-50
-        w-full nav-transition ' +
-        nav_bar_color()
-      "
-    >
-      <div class="navbar-start">
-        <div class="dropdown flex flex-row">
-          <label tabindex="0" class="btn btn-ghost text-white btn-circle p-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-black"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h7"
-              />
-            </svg>
-          </label>
-          <ul
-            tabindex="0"
-            class="
-              menu menu-compact
-              dropdown-content
-              mt-3
-              p-2
-              shadow
-              bg-base-100
-              rounded-box
-              w-52
-            "
-          >
-            <li><a>Homepage</a></li>
-            <li><a>Portfolio</a></li>
-            <li><a>About</a></li>
-          </ul>
-
-          <img
-            class="w-32 btn btn-ghost rounded-lg"
-            src="https://firebasestorage.googleapis.com/v0/b/river-valley-irregulars-dev.appspot.com/o/assets%2Fimages%2FRVI_Logo_Black.png?alt=media&token=728d0b2d-92b3-4542-9e02-64634a0c0e00"
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="navbar-end">
-        <div class="flex flex-row space-x-2 mr-10">
-          <button class="btn btn-ghost rounded-lg capitalize btn-sm">
-            Story
-          </button>
-
-          <button class="btn btn-ghost rounded-lg capitalize btn-sm">
-            Opportunities
-          </button>
-
-          <button class="btn btn-ghost rounded-lg capitalize btn-sm">
-            Partner
-          </button>
-
-          <button class="btn btn-ghost rounded-lg capitalize btn-sm">
-            Youth
-          </button>
-
-          <details class="dropdown">
-            <summary
-              class="btn btn-ghost rounded-lg capitalize btn-sm py-0 px-3"
-              (click)="swapIcon()"
-            >
-              <span>Others</span>
-              <div class="swap" [ngClass]="{ 'swap-active': swapIconState() }">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6 swap-off"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6 swap-on"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.5 15.75l7.5-7.5 7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </summary>
-            <ul
-              class="
-                p-2
-                shadow
-                menu
-                dropdown-content
-                z-[1]
-                bg-base-100
-                rounded-box
-                w-52
-              "
-            >
-              <li><a>Feature request</a></li>
-              <li><a>Report a bug</a></li>
-              <li><a>Privacy Policy</a></li>
-            </ul>
-          </details>
-        </div>
-
-        <!-- Search -->
-        <button class="btn btn-ghost text-white btn-circle p-0">
+  <!-- NAVIGATION BAR -->
+  <nav
+    [class]="
+      'navbar
+      backdrop-blur-m
+      fixed
+      top-0
+      z-50
+      max-h-16
+      h-full
+      w-full nav-transition ' +
+      nav_bar_color()
+    "
+  >
+    <div class="navbar-start">
+      <div class="dropdown flex flex-row">
+        <label tabindex="0" class="btn btn-ghost text-white btn-circle p-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 text-black"
@@ -142,75 +28,191 @@
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              d="M4 6h16M4 12h16M4 18h7"
             />
           </svg>
+        </label>
+        <ul
+          tabindex="0"
+          class="
+            menu menu-compact
+            dropdown-content
+            mt-3
+            p-2
+            shadow
+            bg-base-100
+            rounded-box
+            w-52
+          "
+        >
+          <li><a>Homepage</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>About</a></li>
+        </ul>
+
+        <img
+          class="w-32 btn btn-ghost rounded-lg"
+          src="https://firebasestorage.googleapis.com/v0/b/river-valley-irregulars-dev.appspot.com/o/assets%2Fimages%2FRVI_Logo_Black.png?alt=media&token=728d0b2d-92b3-4542-9e02-64634a0c0e00"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="navbar-end">
+      <div class="flex flex-row space-x-2 mr-2">
+        <button class="btn btn-ghost rounded-lg capitalize btn-sm">
+          Story
         </button>
 
-        <!-- Notification -->
-        <button class="btn btn-ghost text-white btn-circle">
-          <div class="indicator">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-black"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-              />
-            </svg>
-            <!-- New notification -->
-            <span class="badge badge-xs badge-success indicator-item"></span>
-          </div>
+        <button class="btn btn-ghost rounded-lg capitalize btn-sm">
+          Opportunities
         </button>
 
-        <!-- Avatar -->
-        <div class="dropdown dropdown-end">
-          <label tabindex="0" class="btn btn-ghost btn-circle p-0 avatar">
-            <div class="w-10 rounded-full">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/river-valley-irregulars-dev.appspot.com/o/users%2FTtFiwaS6psZicaarB3sHamGPd453%2Fdisplay_picture%2FTtFiwaS6psZicaarB3sHamGPd453?alt=media&token=d0f20cea-4765-474e-b017-dd233b02fa17"
-              />
+        <button class="btn btn-ghost rounded-lg capitalize btn-sm">
+          Partner
+        </button>
+
+        <button class="btn btn-ghost rounded-lg capitalize btn-sm">
+          Youth
+        </button>
+
+        <details class="dropdown">
+          <summary
+            class="btn btn-ghost rounded-lg capitalize btn-sm py-0 px-3"
+            (click)="swapIcon()"
+          >
+            <span>Others</span>
+            <div class="swap" [ngClass]="{ 'swap-active': swapIconState() }">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 swap-off"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 swap-on"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                />
+              </svg>
             </div>
-          </label>
+          </summary>
           <ul
-            tabindex="0"
             class="
-              menu menu-compact
-              dropdown-content
-              mt-3
               p-2
-              bg-[#ffffff4d]
-              rounded-xl
-              shadow-md
-              backdrop-blur-md
-              border border-[#a9a9a945]
+              shadow
+              menu
+              dropdown-content
+              z-[1]
+              bg-base-100
               rounded-box
               w-52
             "
           >
-            <li>
-              <a class="justify-between">
-                Profile
-                <span class="badge">New</span>
-              </a>
-            </li>
-            <li><a>Settings</a></li>
-            <li><a>Logout</a></li>
+            <li><a>Feature request</a></li>
+            <li><a>Report a bug</a></li>
+            <li><a>Privacy Policy</a></li>
           </ul>
-        </div>
+        </details>
       </div>
-    </nav>
-  <div class="text-container h-full z-30 border-t border-[#484e5145] mt-[4.1rem]">
-    <div
-      class="max-h-full w-full overflow-scroll flex flex-row"
-      (scroll)="onScroll($event)"
-    >
+
+      <!-- Search -->
+      <button class="btn btn-ghost text-white btn-circle p-0">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 text-black"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      </button>
+
+      <!-- Notification -->
+      <button class="btn btn-ghost text-white btn-circle">
+        <div class="indicator">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 text-black"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            />
+          </svg>
+          <!-- New notification -->
+          <span class="badge badge-xs badge-success indicator-item"></span>
+        </div>
+      </button>
+
+      <!-- Avatar -->
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle p-0 avatar">
+          <div class="w-10 rounded-full">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/river-valley-irregulars-dev.appspot.com/o/users%2FTtFiwaS6psZicaarB3sHamGPd453%2Fdisplay_picture%2FTtFiwaS6psZicaarB3sHamGPd453?alt=media&token=d0f20cea-4765-474e-b017-dd233b02fa17"
+            />
+          </div>
+        </label>
+        <ul
+          tabindex="0"
+          class="
+            menu menu-compact
+            dropdown-content
+            mt-3
+            p-2
+            bg-[#ffffff4d]
+            rounded-xl
+            shadow-md
+            backdrop-blur-md
+            border border-[#a9a9a945]
+            rounded-box
+            w-52
+          "
+        >
+          <li>
+            <a class="justify-between">
+              Profile
+              <span class="badge">New</span>
+            </a>
+          </li>
+          <li><a>Settings</a></li>
+          <li><a>Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="text-container h-full z-30 border-t border-[#484e5145] mt-16">
+    <div class="max-h-full w-full overflow-scroll flex flex-row" (scroll)="onScroll($event)">
+
       <!-- Left Navigation -->
       <header class="sticky right-0 ml-auto top-0 space-y-5 border-r border-[#484e5145] pt-10">
         <!-- First container -->
@@ -296,15 +298,7 @@
 
       <main class="flex flex-row max-w-7xl mr-auto pr-5 h-full">
         <!-- Post contents -->
-        <div
-          class="
-            flex-[50%]
-            space-y-5
-            px-5
-            py-10
-            h-full
-          "
-        >
+        <div class="flex-[50%] space-y-5 px-5 py-10 h-full pb-28" >
           <div
             *ngFor="let card of cards"
             class="card bg-white card-compact bg-base-100 shadow-xl"
@@ -321,21 +315,10 @@
             </div>
           </div>
         </div>
-
-        
-        <!-- Right Opportunities -->
-        <div
-          class="
-            flex-[25%]
-            h-screen
-            sticky
-            left-0
-            top-0
-            pt-10
-            border-l border-[#484e5145]
-          "
-        >
-          <div class="bg-[#ffffff4d] ml-5 rounded-xl shadow-md backdrop-blur-md border border-[#a9a9a945] p-5">
+   
+        <!-- Opportunities -->
+        <div class="flex-[25%] h-screen sticky left-0 top-0 pt-10 border-l border-[#484e5145]">
+          <div class="bg-[#ffffff4d] ml-5 rounded-xl shadow-md backdrop-blur-3xl border border-[#a9a9a945] p-5">
             <h5 class="font-bold">Featured Opportunities</h5>
             <div
               class="
@@ -343,7 +326,7 @@
                 mt-3
                 space-x-2
                 cursor-pointer
-                hover:bg-gray-100/50
+                hover:bg-[#2b2b2b]/20
                 rounded-xl
                 py-2
                 px-2
@@ -428,17 +411,19 @@
             </div>
           </div>
         </div>
+        
       </main>
 
     </div>
   </div>
 
-    <div class="gradients-container">
-      <div class="g1"></div>
-      <div class="g2"></div>
-      <div class="g3"></div>
-      <div class="g4"></div>
-      <div class="g5"></div>
-    </div>
+  <!-- GRADIENT BACKGROUND -->
+  <div class="gradients-container">
+    <div class="g1"></div>
+    <div class="g2"></div>
+    <div class="g3"></div>
+    <div class="g4"></div>
+    <div class="g5"></div>
+  </div>
 
 </div>
